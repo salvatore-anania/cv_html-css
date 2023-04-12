@@ -1,8 +1,11 @@
+@media (width> 700px) {
 header{
     display:flex;
     justify-content: center;
     align-items: center;
     max-width: inherit;
+    animation-duration: 3s;
+    animation-name: slidein;
 }
 
 main{
@@ -33,7 +36,8 @@ section hr{
 
 #photo{
     flex:1;
-    text-align:right
+    text-align:right;
+    
 }
 
 #main_title{
@@ -87,3 +91,41 @@ section hr{
 .description_title{
     font-weight: bold;
 }
+  
+@keyframes slidein {
+    from {
+      margin-top: 100%;
+    }
+  
+    to {
+      margin-top: 0%;
+    }
+  }
+  
+}
+
+@media (width< 700px) {
+    * :not(title){
+        display:block;
+
+    }
+
+    #bandeau{
+        background:lightgrey;
+        font-size:20px;
+        display:flex;
+        text-align:center;
+        justify-content: center;
+        align-items: center;
+        height: 2em;
+    }
+    
+    #bandeau a{
+        display:flex;
+        text-align:center;
+        justify-content: center;
+        align-items: center;
+        margin:10%;
+    }
+    
+  }
